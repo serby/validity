@@ -2,9 +2,9 @@
 	"name": "validity",
 	"description": "A suite of validators",
 	"version": "0.0.1",
-	"author": "Paul Serby <paul.serby@clock.co.uk>",
+	"author": "Paul Serby <paul@serby.net>",
 	"contributors": [
-		{ "name": "Paul Serby", "email": "paul.serby@clock.co.uk" }
+		{ "name": "Paul Serby", "email": "paul@serby.net" }
 	],
 	"dependencies": {
 	},
@@ -16,7 +16,7 @@
 	"repository": "git://github.com/serby/validity",
 	"main": "./property-validators",
 	"scripts": {
-		"test": "cake test",
+		"test": "./node_modules/.bin/mocha -r should",
 		"prepublish" : "npm prune"
 	},
 	"engines": { "node": ">= 0.6" }
