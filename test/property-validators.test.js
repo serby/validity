@@ -20,6 +20,23 @@ describe('property-validators', function() {
 
   });
 
+
+  describe('required', function() {
+    it('should not return error for provided property', function(done) {
+      validity.required('age', 'Age', { age: 1 }, function(error, valid) {
+        should.not.exist(valid);
+        done();
+      });
+    });
+
+    it('should return correct error message for missing property', function(done) {
+      validity.required('age', 'Age', { age: '' }, function(error, valid) {
+        valid.should.eql('Age is required');
+        done();
+      });
+    });
+  });
+
   describe('integer', function() {
     it('should not return error for valid integer', function(done) {
       validity.integer('age', 'Age', { age: 1 }, function(error, valid) {
