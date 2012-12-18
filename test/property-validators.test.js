@@ -29,6 +29,13 @@ describe('property-validators', function() {
       });
     });
 
+    it('should not return error for provided date property', function(done) {
+      validity.required('date', 'Date', { date: new Date() }, function(error, valid) {
+        should.not.exist(valid);
+        done();
+      });
+    });
+
     it('should return correct error message for missing property', function(done) {
       validity.required('age', 'Age', { age: '' }, function(error, valid) {
         valid.should.eql('Age is required');
