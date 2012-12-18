@@ -5,5 +5,5 @@
  * @return {Boolean} True if value is not
  */
 module.exports = function(value) {
-	return (value !== undefined) && (value !== null) && (value !== '') && !((typeof value === 'object') && (Object.keys(value).length === 0));
+	return (value !== undefined) && (value !== null) && (value !== '') && !((typeof value === 'object') && (Object.keys(value).length === 0) && !value instanceof Date);
 };
