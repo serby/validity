@@ -1,9 +1,8 @@
-var
-	validators = require('../..').validators,
-	assert = require('assert');
+var isPostcode = require('../../validators/ukpostcode');
 
-module.exports = {
-	'Correctly validates valid UK postcodes': function(data) {
+describe('Postcode Validation', function() {
+
+	it('should correctly validates valid postcodes', function() {
 		[
 			'wd4 8rq',
 			'wd4 8rq',
@@ -13,17 +12,19 @@ module.exports = {
 			'EC1R 3AD',
 			'WD48RQ'
 		].forEach(function(value) {
-			assert.ok(validators.isUKPostcode(value), '\'' + value + '\' is a valid UK postcode and should pass');
+			isPostcode(value).should.eql(true);
 		});
-	},
-	'Correctly returns false for invaild UK postcodes': function(data) {
+	});
+
+	it('should correctly returns false for invaild postcodes', function() {
 		[
 			'a',
 			'',
 			'12',
 			'hp1 2n'
 		].forEach(function(value) {
-			assert.equal(validators.isUKPostcode(value), false, '\'' + value + '\' is not a valid UK postcode and should fail');
+			isPostcode(value).should.eql(false);
 		});
-	}
-};
+	});
+
+});
