@@ -1,39 +1,49 @@
-var
-	validators = require('../..').validators,
-	assert = require('assert');
+var isInteger = require('../../validators/integer');
 
-module.exports = {
-	'integer Numbers are integers': function() {
-		assert.strictEqual(validators.isInteger(1), true);
-	},
-	'integer Strings are integers': function() {
-		assert.strictEqual(validators.isInteger('1'), true);
-	},
-	'integer Numbers with trailing zero decimals are integers': function() {
-		assert.strictEqual(validators.isInteger(1.0), true);
-	},
-	'negative integer Numbers are integers': function() {
-		assert.strictEqual(validators.isInteger(-1), true);
-	},
-	'negative integer strings are integers': function() {
-		assert.strictEqual(validators.isInteger('-1'), true);
-	},
-	'real Numbers are not integer': function() {
-		assert.strictEqual(validators.isInteger(1.1), false);
-	},
-	'real Strings are not integer': function() {
-		assert.strictEqual(validators.isInteger('1.1'), false);
-	},
-	'strings are not integers': function() {
-		assert.strictEqual(validators.isInteger('hello'), false);
-	},
-	'objects are not integers': function() {
-		assert.strictEqual(validators.isInteger({}), false);
-	},
-	'arrays are not integers': function() {
-		assert.strictEqual(validators.isInteger([1]), true);
-	},
-	'booleans are not integers': function() {
-		assert.strictEqual(validators.isInteger(true), true);
-	}
-};
+describe('Integer Validation', function() {
+
+	it('should return true for valid Integer', function() {
+		isInteger(1).should.equal(true)
+	});
+
+	it('should return true for valid String Integer', function() {
+		isInteger('1').should.equal(true)
+	});
+
+	it('should return true for valid Integer with zero decimal', function() {
+		isInteger(1.0).should.equal(true)
+	});
+
+	it('should return true for negative Integer', function() {
+		isInteger(-1).should.equal(true)
+	});
+
+	it('should return true for negative String Integer', function() {
+		isInteger('-1').should.equal(true)
+	});
+
+	it('should return false for real numbers', function() {
+		isInteger(1.1).should.equal(false)
+	});
+
+	it('should return false for string real numbers', function() {
+		isInteger('1.1').should.equal(false)
+	});
+
+	it('should return false for strings', function() {
+		isInteger('hello').should.equal(false)
+	});
+
+	it('should return false for objects', function() {
+		isInteger({}).should.equal(false)
+	});
+
+	it('should return false for arrays with 1 integer inside', function() {
+		isInteger([1]).should.equal(false)
+	});
+
+	it('should return false for booleans', function() {
+		isInteger(true).should.equal(false)
+	});
+
+});
