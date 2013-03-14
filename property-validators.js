@@ -12,6 +12,10 @@ module.exports = {
     booleanToCallback(require('./validators/email')),
     '#{name} must be a valid email address'),
 
+  url: propertyValidator(
+    booleanToCallback(require('./validators/url')),
+    '#{name} must be a valid URL'),
+
   required: propertyValidator(
     booleanToCallback(require('./validators/required')),
     '#{name} is required'),
