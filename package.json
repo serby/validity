@@ -1,10 +1,11 @@
 {
 	"name": "validity",
 	"description": "A suite of validators",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Paul Serby <paul@serby.net>",
 	"contributors": [
-		{ "name": "Paul Serby", "email": "paul@serby.net" }
+		{ "name": "Paul Serby", "email": "paul@serby.net" },
+		{ "name": "Adam Duncan", "email": "adam.duncan@clock.co.uk" }
 	],
 	"dependencies": {
 	},
