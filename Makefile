@@ -1,9 +1,12 @@
 default: test lint
 
+TESTS = $$(find test -name "*.test.js")
+
 test:
 	@./node_modules/.bin/mocha \
 		-r should \
-		-R spec
+		-R spec \
+		$(TESTS)
 
 lint-changed:
 	@jshint `git status --porcelain | sed -e "s/^...//g"`

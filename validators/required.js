@@ -5,5 +5,16 @@
  * @return {Boolean} True if value is not
  */
 module.exports = function(value) {
-	return (value !== undefined) && (value !== null) && (value !== '') && !((typeof value === 'object') && (Object.keys(value).length === 0) && !value instanceof Date);
+  // false for undefined, null and empty string
+  if (value === undefined || value === null || value === '') {
+    return false
+  // false for empty array  
+  } else if (Array.isArray(value) && value.length === 0) { 
+    return false
+  // false for empty object (which is not a date)
+  } else if (typeof value === 'object' && Object.keys(value).length === 0 && !(value instanceof Date)) {
+    return false
+  }
+
+  return true
 };

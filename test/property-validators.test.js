@@ -20,6 +20,23 @@ describe('property-validators', function() {
 
   });
 
+  describe('url', function() {
+    it('should not return error for valid URL', function(done) {
+      validity.url('website', 'Website', { website:'http://www.google.com' }, function(error, valid) {
+        should.not.exist(valid);
+        done();
+      });
+    });
+
+    it('should return correct error message for invalid URL', function(done) {
+      validity.url('website', 'Website', { website:'http://asdasdsa' }, function(error, valid) {
+        valid.should.eql('Website must be a valid URL');
+        done();
+      });
+    });
+
+  });
+
 
   describe('required', function() {
     it('should not return error for provided property', function(done) {

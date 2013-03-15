@@ -16,7 +16,7 @@
 	"repository": "git://github.com/serby/validity",
 	"main": "./property-validators",
 	"scripts": {
-		"test": "./node_modules/.bin/mocha -r should",
+		"test": "make test",
 		"prepublish" : "npm prune"
 	},
 	"engines": { "node": ">= 0.6" }
