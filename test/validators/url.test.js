@@ -18,7 +18,7 @@ describe('URL Validation', function() {
 			'http://user:password@a.com',
 			'http://user:password@a.com?f=b&b=a',
 			'http://user:password@www.a.com?f=b&b=a',
-			'http://user:password@www.a.a.a.a.a.a.a.a.a.a.a.a.com/mypage.html?f=b&b=a#',
+			'http://user:password@www.a.a.a.a.a.a.a.a.a.a.a.a.com/mypage.html?f=b&b=a#'
 		].forEach(function(value) {
 			isUrl(value).should.eql(true);
 		});

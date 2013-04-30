@@ -1,10 +1,10 @@
 var propertyValidator = require('./property-validator')
-  ;
+
 
 function booleanToCallback(fn) {
   return function(propertyName, object, callback) {
-    callback(undefined, fn(object[propertyName]));
-  };
+    callback(undefined, fn(object[propertyName]))
+  }
 }
 
 module.exports = {
@@ -20,8 +20,9 @@ module.exports = {
     booleanToCallback(require('./validators/required')),
     '#{name} is required'),
 
-  customRequired: function(failureMessage) { return propertyValidator(
-    booleanToCallback(require('./validators/required')), failureMessage); },
+  customRequired: function(failureMessage) {
+    return propertyValidator(booleanToCallback(require('./validators/required')), failureMessage)
+  },
 
   ukpostcode: propertyValidator(booleanToCallback(
     require('./validators/ukpostcode')),
@@ -31,7 +32,7 @@ module.exports = {
     return propertyValidator(
       booleanToCallback(
       require('./validators/length').bind(this, min, max)),
-      '#{name} must be between ' + min + ' and ' + max + ' in length');
+      '#{name} must be between ' + min + ' and ' + max + ' in length')
   },
 
   integer: propertyValidator(
@@ -52,4 +53,4 @@ module.exports = {
     return validate
   }
 
-};
+}

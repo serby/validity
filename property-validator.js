@@ -24,7 +24,7 @@
 module.exports = function(validator, failureMessage) {
 
   if (typeof validator !== 'function') {
-    throw new TypeError('validator should be a function not a ' + typeof validator);
+    throw new TypeError('validator should be a function not a ' + typeof validator)
   }
 
   /**
@@ -38,9 +38,9 @@ module.exports = function(validator, failureMessage) {
    */
   function validate(propertyName, errorName, object, callback) {
     validator(propertyName, object, function(error, valid, customMessage) {
-      var message = customMessage || failureMessage || '#{name} is not valid';
-      callback(error, valid ? undefined : message.replace(/#\{name\}/g, errorName));
-    });
+      var message = customMessage || failureMessage || '#{name} is not valid'
+      callback(error, valid ? undefined : message.replace(/#\{name\}/g, errorName))
+    })
   }
 
   /**
@@ -49,10 +49,10 @@ module.exports = function(validator, failureMessage) {
    * @param {String} message The custom failure message
    */
   function setFailureMessage (message) {
-    failureMessage = message;
+    failureMessage = message
   }
 
-  validate.setFailureMessage = setFailureMessage;
+  validate.setFailureMessage = setFailureMessage
 
-  return validate;
-};
+  return validate
+}

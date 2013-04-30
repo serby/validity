@@ -8,5 +8,5 @@ module.exports = function(value) {
   if (Array.isArray(value) || (typeof value === 'boolean')) {
     return false
   }
-	return Math.round(+value) == value;
-};
+	return Math.round(+value) == value
+}
