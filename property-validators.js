@@ -39,5 +39,17 @@ module.exports = {
       require('./validators/integer')),
       '#{name} must be an integer'),
 
-  booleanToCallback: booleanToCallback
+  booleanToCallback: booleanToCallback,
+
+  // Pass in one of the other validators. If the value is not null then validate.
+  nullOrValidator: function (propertyValidator) {
+    function validate(propertyName, errorName, object, callback) {
+      if (object[propertyName] === null) {
+        return callback(null, undefined)
+      }
+      propertyValidator(propertyName, errorName, object, callback)
+    }
+    return validate
+  }
+
 };

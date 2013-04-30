@@ -1,7 +1,7 @@
 {
 	"name": "validity",
 	"description": "A suite of validators",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Paul Serby <paul@serby.net>",
 	"contributors": [
 		{ "name": "Paul Serby", "email": "paul@serby.net" },

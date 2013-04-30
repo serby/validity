@@ -76,4 +76,26 @@ describe('property-validators', function() {
     })
   })
 
+  describe('nullOrValidator', function() {
+    it('should succeed with null', function(done) {
+      validity.nullOrValidator(validity.integer)('age', 'Age', { age: null }, function(error, valid) {
+        should.not.exist(valid)
+        done()
+      })
+    })
+
+    it('should fail with invalid value', function(done) {
+      validity.nullOrValidator(validity.integer)('age', 'Age', { age: 'jim' }, function(error, valid) {
+        valid.should.eql('Age must be an integer')
+        done()
+      })
+    })
+
+    it('should succeed with valid value', function(done) {
+      validity.nullOrValidator(validity.integer)('age', 'Age', { age: 35 }, function(error, valid) {
+        should.not.exist(valid)
+        done()
+      })
+    })
+  })
 })
