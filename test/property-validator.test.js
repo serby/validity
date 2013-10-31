@@ -1,7 +1,6 @@
 var propertyValidator = require('../property-validator')
   , should = require('should')
 
-
 function isValue(key, object, callback) {
   callback(undefined, object[key])
 }

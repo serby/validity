@@ -16,8 +16,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "~1",
+    "should": "~2"
   },
   "keywords": [
     "validation"
