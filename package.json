@@ -1,24 +1,34 @@
 {
-	"name": "validity",
-	"description": "A suite of validators",
-	"version": "0.0.3",
-	"author": "Paul Serby <paul@serby.net>",
-	"contributors": [
-		{ "name": "Paul Serby", "email": "paul@serby.net" },
-		{ "name": "Adam Duncan", "email": "adam.duncan@clock.co.uk" }
-	],
-	"dependencies": {
-	},
-	"devDependencies": {
-		"mocha": "*",
-		"should": "*"
-	},
-	"keywords": ["validation"],
-	"repository": "git://github.com/serby/validity",
-	"main": "./property-validators",
-	"scripts": {
-		"test": "make test",
-		"prepublish" : "npm prune"
-	},
-	"engines": { "node": ">= 0.6" }
+  "name": "validity",
+  "description": "A suite of validators",
+  "version": "0.0.3",
+  "author": "Paul Serby <paul@serby.net>",
+  "contributors": [
+    {
+      "name": "Paul Serby",
+      "email": "paul@serby.net"
+    },
+    {
+      "name": "Adam Duncan",
+      "email": "adam.duncan@clock.co.uk"
+    }
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "validation"
+  ],
+  "repository": "git://github.com/serby/validity",
+  "main": "./property-validators",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+  },
+  "engines": {
+    "node": ">= 0.6"
+  }
 }

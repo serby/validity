@@ -1,5 +1,10 @@
 # validity - Validation framework
 
+[![NPM Details](https://nodei.co/npm/validity.png?stars&downloads)](https://npmjs.org/package/validity)
+
+[![build status](https://api.travis-ci.org/serby/validity.png)](http://travis-ci.org/serby/validity)
+
+
 An extendible validation framework for validating the properties of an object. Also contains a number of standard validators.
 
 ## Installation
