@@ -1,6 +1,6 @@
 {
   "name": "validity",
-  "description": "A suite of validators",
+  "description": "Validator framework for object validation",
   "version": "0.0.3",
   "author": "Paul Serby <paul@serby.net>",
   "contributors": [
