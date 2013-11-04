@@ -8,5 +8,6 @@ module.exports = function(value) {
   if (Array.isArray(value) || (typeof value === 'boolean')) {
     return false
   }
+  /* jshint eqeqeq: false */
 	return Math.round(+value) == value
 }

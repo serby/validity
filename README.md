@@ -4,16 +4,15 @@
 
 [![build status](https://api.travis-ci.org/serby/validity.png)](http://travis-ci.org/serby/validity)
 
-
 An extendible validation framework for validating the properties of an object. Also contains a number of standard validators.
 
 ## Installation
 
-      npm install validity
+    npm install validity
 
 ## Run Tests
 
-      make tests
+    npm test
 
 ## Validators
 
