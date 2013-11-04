@@ -30,6 +30,7 @@ The are a few validators that currently exist and can be used for reference:
 - [validity-number-in-range](https://npmjs.org/package/validity-number-in-range)
 - [validity-payment-card-number](https://npmjs.org/package/validity-payment-card-number)
 - [validity-unique-property](https://npmjs.org/package/validity-unique-property)
+- [validity-entity-exists](https://npmjs.org/package/validity-entity-exists)
 
 ## Credits
 [Paul Serby](https://github.com/serby/) follow me on twitter [@serby](http://twitter.com/serby)
