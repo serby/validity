@@ -31,6 +31,7 @@ The are a few validators that currently exist and can be used for reference:
 - [validity-payment-card-number](https://npmjs.org/package/validity-payment-card-number)
 - [validity-unique-property](https://npmjs.org/package/validity-unique-property)
 - [validity-url-optional-tlds](https://npmjs.org/package/validity-url-optional-tlds)
+- [validity-entity-exists](https://npmjs.org/package/validity-entity-exists)
 
 ## Credits
 [Paul Serby](https://github.com/serby/) follow me on twitter [@serby](http://twitter.com/serby)
