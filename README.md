@@ -35,6 +35,8 @@ The are a few validators that currently exist and can be used for reference:
 - [validity-regex-match](https://github.com/tomgco/validity-regex-match)
 - [validity-string-represents-mongodb-objectid](https://github.com/tomgco/validity-string-represents-mongodb-objectid)
 - [validity-validate-if-set](https://github.com/domharrington/validity-validate-if-set)
+- [validity-validate-if-property-set](https://github.com/microadam/validity-validate-if-property-set)
+- [validity-validate-if-property-equals](https://github.com/microadam/validity-validate-if-property-equals)
 
 ## Credits
 [Paul Serby](https://github.com/serby/) follow me on twitter [@serby](http://twitter.com/serby)
