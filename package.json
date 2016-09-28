@@ -3,6 +3,7 @@
   "description": "Validator framework for object validation",
   "version": "0.0.3",
   "author": "Paul Serby <paul@serby.net>",
+  "license": "ISC",
   "contributors": [
     {
       "name": "Paul Serby",
