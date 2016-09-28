@@ -5,6 +5,7 @@
  * @return {Boolean} True if value is a valid format for a UK Postcode
  */
 module.exports = function(min, max, value) {
+	console.warn('Length validator deprecated. This will be removed in the next major version.')
 	if (min < 0) {
 		throw new RangeError('min must be >= 0')
 	}

@@ -5,6 +5,7 @@
  * @return {Boolean} True if value is not
  */
 module.exports = function(value) {
+  console.warn('Required validator deprecated. This will be removed in the next major version.')
   // false for undefined, null and empty string
   if (value === undefined || value === null || value === '') {
     return false
