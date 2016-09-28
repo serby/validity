@@ -21,4 +21,5 @@ defaultMessageValidator.setFailureMessage = requiredValidator
 module.exports = defaultMessageValidator
 
 // or this can be wrapped up using this helper
-module.exports = validity.createValidatorAllowingFailureMessageOverride(requiredValidator, '#{name} is required')
+module.exports = validity.createValidatorAllowingFailureMessageOverride(booleanToCallback(isEven)
+  , '#{name} is required')

@@ -59,9 +59,8 @@ This can be wrapped up using the `createValidatorAllowingFailureMessageOverride`
 
 ```js
 var validity = require('validity')
-  , requiredValidator = validity.createValidator(validity.booleanToCallback(isValid))
 
-module.exports = validity.createValidatorAllowingFailureMessageOverride(requiredValidator, '#{name} is required')
+module.exports = validity.createValidatorAllowingFailureMessageOverride(validity.booleanToCallback(isValid), '#{name} is required')
 
 ```
 
