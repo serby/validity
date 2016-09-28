@@ -8,18 +8,18 @@
     {
       "name": "Paul Serby",
       "email": "paul@serby.net"
-    },
-    {
-      "name": "Adam Duncan",
-      "email": "adam.duncan@clock.co.uk"
     }
   ],
+  "files": [ "index.js" ],
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^3.6.1",
+    "eslint-config-clock": "^1.1.0",
+    "eslint-config-standard": "^6.1.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
     "istanbul": "^0.4.5",
-    "jshint": "^2.9.3",
-    "mocha": "^3.1.0",
-    "should": "^11.1.0"
+    "mocha": "^3.1.0"
   },
   "keywords": [
     "validation"
@@ -27,11 +27,11 @@
   "repository": "git://github.com/serby/validity",
   "main": "./property-validators",
   "scripts": {
-    "lint": "jshint .",
+    "lint": "eslint .",
     "pretest": "npm run-script lint",
-    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec",
     "posttest": "istanbul check-coverage && rm -rf coverage",
-    "prepublish": "npm test && npm prune"
+    "prepublish": "npm test"
   },
   "engines": {
     "node": ">= 0.10"
