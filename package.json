@@ -16,10 +16,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "1",
-    "should": "2",
-    "istanbul": "0",
-    "jshint": "2"
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.3",
+    "mocha": "^3.1.0",
+    "should": "^11.1.0"
   },
   "keywords": [
     "validation"
@@ -27,10 +27,10 @@
   "repository": "git://github.com/serby/validity",
   "main": "./property-validators",
   "scripts": {
-    "lint": "./node_modules/.bin/jshint .",
+    "lint": "jshint .",
     "pretest": "npm run-script lint",
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
-    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
+    "posttest": "istanbul check-coverage && rm -rf coverage",
     "prepublish": "npm test && npm prune"
   },
   "engines": {
