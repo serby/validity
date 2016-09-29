@@ -91,7 +91,6 @@ Validators that currently exist and can be used:
 - [validity-entity-exists](https://www.npmjs.com/package/validity-entity-exists)
 - [validity-equal-field](https://www.npmjs.com/package/validity-equal-field)
 - [validity-equal](https://www.npmjs.com/package/validity-equal)
-- [validity-float](https://www.npmjs.com/package/validity-float)
 - [validity-integer *](https://www.npmjs.com/package/validity-integer)
 - [validity-number-in-range *](https://www.npmjs.com/package/validity-number-in-range)
 - [validity-number](https://www.npmjs.com/package/validity-number)
