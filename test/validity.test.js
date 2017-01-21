@@ -9,7 +9,6 @@ function alwaysFail (key, object, callback) {
   callback(null, false)
 }
 
-
 function isValueWithExpectedError (key, object, callback) {
   callback(new Error('Something really bad happend'), 'Unexpected error')
 }
