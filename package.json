@@ -1,7 +1,7 @@
 {
   "name": "validity",
   "description": "Validator framework for object validation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Paul Serby <paul@serby.net>",
   "license": "ISC",
   "contributors": [
