@@ -7,9 +7,12 @@ function booleanToCallback (fn) {
 function createValidator (asyncValidateFn) {
   return function (failureMessage) {
     return function validate (propertyName, readablePropertyName, object, callback) {
+      var value = object[propertyName]
       asyncValidateFn(propertyName, object, function (error, valid) {
         if (error) return callback(error, 'Unexpected error')
-        callback(error, valid ? undefined : failureMessage.replace(/#\{name\}/g, readablePropertyName))
+        callback(error, valid ? undefined : failureMessage
+          .replace(/#\{value\}/g, value)
+          .replace(/#\{name\}/g, readablePropertyName))
       })
     }
   }

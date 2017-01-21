@@ -32,6 +32,7 @@
   "scripts": {
     "inspect": "jsinspect",
     "lint": "eslint .",
+    "qa:test": "mocha -w -R min test/**.test.js",
     "pretest": "npm run lint && npm run inspect",
     "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec",
     "posttest": "istanbul check-coverage && rm -rf coverage",

@@ -5,6 +5,11 @@ function isValue (key, object, callback) {
   callback(null, object[key])
 }
 
+function alwaysFail (key, object, callback) {
+  callback(null, false)
+}
+
+
 function isValueWithExpectedError (key, object, callback) {
   callback(new Error('Something really bad happend'), 'Unexpected error')
 }
@@ -44,11 +49,21 @@ describe('validity', function () {
       })
     })
 
-    it('should return validation error message if unsuccessful validated', function (done) {
+    it('should return custom failure message when invalid', function (done) {
       const validate = validity.createValidator(isValue)('#{name} is not valid')
       validate('a', 'z', { a: false }, function (error, valid) {
         assert.equal(error, null)
         assert.equal(valid, 'z is not valid')
+        done(error)
+      })
+    })
+
+    it('should return custom failure message injecting #{name} and #{value}', function (done) {
+      const validate = validity
+        .createValidator(alwaysFail)('An #{name} with a value of #{value}, is not valid')
+      validate('email', 'email', { email: 'paul@serby.net' }, function (error, valid) {
+        assert.equal(error, null)
+        assert.equal(valid, 'An email with a value of paul@serby.net, is not valid')
         done(error)
       })
     })
