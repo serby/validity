@@ -19,7 +19,7 @@ function createValidator (asyncValidateFn) {
 }
 
 function createValidatorAllowingFailureMessageOverride (asyncValidateFn, defaultFailureMessage) {
-  const validator = createValidator(asyncValidateFn)
+  var validator = createValidator(asyncValidateFn)
     , defaultMessageValidator = validator(defaultFailureMessage)
 
   defaultMessageValidator.setFailureMessage = validator
