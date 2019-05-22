@@ -84,6 +84,7 @@ validity and allow easy overriding of failure messages.
 
 Validators that currently exist and can be used:
 
+- [https://www.npmjs.com/package/validity-currency](https://www.npmjs.com/package/validity-currency)
 - [validity-alphanumeric-property](https://www.npmjs.com/package/validity-alphanumeric-property)
 - [validity-date-before-property](https://www.npmjs.com/package/validity-date-before-property)
 - [validity-date-in-range](https://www.npmjs.com/package/validity-date-in-range)
@@ -108,6 +109,7 @@ Validators that currently exist and can be used:
 - [validity-validate-if-property-equals](https://www.npmjs.com/package/validity-validate-if-property-equals)
 - [validity-validate-if-property-set](https://www.npmjs.com/package/validity-validate-if-property-set)
 - [validity-validate-if-set *](https://www.npmjs.com/package/validity-validate-if-set)
+- [validity-validation-group](https://www.npmjs.com/package/validity-validation-group)
 
 __* - These modules replace functionality previously found in validity pre version 1__
 
