@@ -1,6 +1,12 @@
 {
-  "extends": "clock",
+  "extends": ["standard", "plugin:prettier/recommended", "prettier/standard"],
   "env": {
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
   }
 }
