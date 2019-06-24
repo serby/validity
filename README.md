@@ -2,7 +2,7 @@
 
 [![NPM Details](https://nodei.co/npm/validity.png?stars&downloads)](https://npmjs.org/package/validity)
 
-[![build status](https://api.travis-ci.org/serby/validity.png)](http://travis-ci.org/serby/validity)
+[![build status](https://api.travis-ci.org/serby/validity.png)](http://travis-ci.org/serby/validity) [![Greenkeeper badge](https://badges.greenkeeper.io/serby/validity.svg)](https://greenkeeper.io/)
 
 Validation helpers for validating the properties of an object.
 
