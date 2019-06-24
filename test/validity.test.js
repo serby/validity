@@ -10,7 +10,7 @@ function alwaysFail (key, object, callback) {
 }
 
 function isValueWithExpectedError (key, object, callback) {
-  callback(new Error('Something really bad happend'), 'Unexpected error')
+  callback(new Error('Something really bad happened'), 'Unexpected error')
 }
 
 describe('validity', function () {
