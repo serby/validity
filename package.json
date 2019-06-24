@@ -42,6 +42,6 @@
     "test:coverage": "jest --coverage --watch"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   }
 }
